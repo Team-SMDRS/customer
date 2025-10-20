@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import logo from '../assets/logo1.png';
 
 interface CustomerProfile {
   customer_id: string;
@@ -187,10 +188,13 @@ const Dashboard = () => {
       {/* Header */}
       <header className="bg-gradient-to-br from-indigo-500 to-purple-600 text-white py-8 shadow-lg">
         <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
-          <div>
-            <h1 className="text-4xl font-bold mb-2">BTrust Bank</h1>
-            <h2 className="text-3xl mb-2 font-bold">Welcome, {data.customer_profile.full_name}</h2>
-            {/* <p className="text-sm opacity-90">Customer ID: {data.customer_profile.customer_id}</p> */}
+          <div className="flex items-center">
+            <img src={logo} alt="Bank Logo" className="h-16 mr-4 rounded-lg" />
+            <div>
+              <h1 className="text-4xl font-bold mb-2">BTrust Bank</h1>
+              <h2 className="text-3xl mb-2 font-bold">Welcome, {data.customer_profile.full_name}</h2>
+              {/* <p className="text-sm opacity-90">Customer ID: {data.customer_profile.customer_id}</p> */}
+            </div>
           </div>
           <button className="px-6 py-2 bg-white/20 border-2 border-white text-white rounded-lg cursor-pointer font-semibold transition-all hover:bg-white hover:text-indigo-500" onClick={handleLogout}>
             Logout
@@ -199,7 +203,7 @@ const Dashboard = () => {
       </header>
 
       {/* Summary Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8 max-w-7xl mx-auto px-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8 max-w-7xl mx-auto px-6 mt-8">
         <div className="bg-white rounded-lg shadow-md p-6 border border-gray-200">
           <div className="text-3xl mb-4">💰</div>
           <div>
