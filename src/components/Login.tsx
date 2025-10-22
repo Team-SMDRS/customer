@@ -15,7 +15,7 @@ const Login = () => {
     setErrorMessage('');
 
     try {
-      const response = await fetch('http://127.0.0.1:8000/customer_data/login', {
+      const response = await fetch('https://api.btrust.dpdns.org/customer_data/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

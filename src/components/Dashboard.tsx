@@ -90,7 +90,7 @@ const Dashboard = () => {
 
       try {
         console.log("Dashboard - Fetching customer data...");
-        const response = await fetch("http://127.0.0.1:8000/customer_data/customers_details", {
+        const response = await fetch("https://api.btrust.dpdns.org/customer_data/customers_details", {
           headers: {
             "Authorization": `Bearer ${token}`,
             "accept": "application/json",
@@ -139,7 +139,7 @@ const Dashboard = () => {
     }
 
     try {
-      const response = await fetch(`http://127.0.0.1:8000/api/pdf-reports/customers/my_transactions_report/pdf?start_date=${startDate}&end_date=${endDate}`, {
+      const response = await fetch(`https://api.btrust.dpdns.org/api/pdf-reports/customers/my_transactions_report/pdf?start_date=${startDate}&end_date=${endDate}`, {
         headers: {
           "Authorization": `Bearer ${token}`,
         },
